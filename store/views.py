@@ -7,7 +7,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
-from .filters import StoreFilter  # Import the StoreFilter class
+from .filters import StoreFilter  
 
 class StoreListCreateView(generics.ListCreateAPIView):
     queryset = Store.objects.all()
@@ -34,11 +34,3 @@ class StoreDetailView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
     lookup_field = "id"
 
-
-# Retrieve, Update, and Delete a Store by ID (GET, PUT, DELETE)
-class StoreDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Store.objects.all()  # Retrieve all Store objects.
-    serializer_class = StoreSerializer  # Use StoreSerializer for JSON conversion.
-    authentication_classes = [TokenAuthentication]  # Require token authentication.
-    permission_classes = [IsAuthenticated]  # Only authenticated users can access.
-    lookup_field = "id"  # Specify that the object lookup should be done using "id" instead of "pk".

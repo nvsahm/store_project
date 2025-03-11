@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django_filters',
 ]
 
-REST_FRAMEWORK = { # configures Django REST Framework settings
+REST_FRAMEWORK = { 
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication', # use token-based authentication
     ],
