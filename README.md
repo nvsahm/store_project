@@ -36,6 +36,17 @@ Diese Anleitung beschreibt, wie du das **Store Project** mit Docker Compose star
 - **Admin-Bereich:** [http://localhost:8000/admin](http://localhost:8000/admin)
 - **API-Dokumentation (Swagger):** [http://localhost:8000/swagger/](http://localhost:8000/swagger/)
 
+## Authentifizierungs-Token im Django Admin erstellen
+1. Melde dich im Django Admin unter [http://localhost:8000/admin](http://localhost:8000/admin) mit deinem Admin-Benutzer an.
+2. Navigiere zu **Tokens** (unter "Auth Token").
+3. Erstelle einen neuen Token für deinen Benutzer.
+
+## Token für API-Anfragen in Swagger nutzen
+1. Öffne die Swagger-Dokumentation unter [http://localhost:8000/swagger/](http://localhost:8000/swagger/).
+2. Klicke oben rechts auf "Authorize".
+3. Gib deinen Token im Format `Token <dein-token>` ein.
+4. Bestätige die Eingabe, um authentifizierte API-Anfragen auszuführen.
+
 ## Projekt stoppen
 Container stoppen:
 ```sh
