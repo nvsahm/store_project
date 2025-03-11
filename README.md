@@ -33,7 +33,6 @@ Diese Anleitung beschreibt, wie du das **Store Project** mit Docker Compose star
    ```
 
 ## Zugriff auf das Projekt
-- **Web-App:** [http://localhost:8000](http://localhost:8000)
 - **Admin-Bereich:** [http://localhost:8000/admin](http://localhost:8000/admin)
 - **API-Dokumentation (Swagger):** [http://localhost:8000/swagger/](http://localhost:8000/swagger/)
 
