@@ -31,11 +31,11 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
     authentication_classes=[TokenAuthentication], 
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('store.urls')),  # Include the store app URLs here
-    #path('api/', include('your_app.urls')),  # Include your app URLs
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
 
