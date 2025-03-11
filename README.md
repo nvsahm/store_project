@@ -21,15 +21,15 @@ Diese Anleitung beschreibt, wie du das **Store Project** mit Docker Compose star
    ```
 3. Führe Migrationen durch:
    ```sh
-   docker-compose exec web python manage.py migrate
+   docker-compose exec django-web python manage.py migrate
    ```
 4. Erstelle einen Admin-Benutzer:
    ```sh
-   docker-compose exec web python manage.py createsuperuser
+   docker-compose exec django-web python manage.py createsuperuser
    ```
 5. Statische Dateien sammeln:
    ```sh
-   docker-compose exec web python manage.py collectstatic --noinput
+   docker-compose exec django-web python manage.py collectstatic --noinput
    ```
 
 ## Zugriff auf das Projekt
